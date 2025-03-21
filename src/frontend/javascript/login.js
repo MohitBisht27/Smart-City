@@ -26,10 +26,10 @@ const accounts = [account1, account2];
 eyeIcon.onclick = function () {
   if (password.type === "password") {
     password.type = "text";
-    eyeIcon.src = "eye-view-interface-symbol-svgrepo-com.svg";
+    eyeIcon.src = "../image/eye-open.svg";
   } else {
     password.type = "password";
-    eyeIcon.src = "eye-password-hide-svgrepo-com.svg";
+    eyeIcon.src = "../image/eye-close.svg";
   }
 };
 

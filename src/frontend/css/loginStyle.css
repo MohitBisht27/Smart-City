@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -24,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(2840.jpg);
+  background-image: url("../image/2840.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

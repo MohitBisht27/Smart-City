@@ -126,33 +126,6 @@ a:nth-child(3) {
   font-weight: bold;
 }
 
-/* Footer */
-.footer {
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  height: 80px;
-}
-
-.footer p {
-  color: white;
-  padding: 0 5px;
-  border-right: 1px solid grey;
-}
-
-.footer a:link {
-  color: rgb(151, 223, 129);
-  padding: 0 5px;
-  text-decoration: none;
-  border-right: 1px solid grey;
-}
-
-.footer a:link:last-child {
-  border: none;
-}
-
 /* Add these new styles below existing CSS */
 
 .features {
@@ -267,4 +240,32 @@ a:nth-child(3) {
   .leftbox h1 {
     font-size: 2.5rem;
   }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+}
+
+.footer p {
+  color: white;
+  padding: 0 5px;
+  border-right: 1px solid grey;
+}
+
+.footer a {
+  color: rgb(151, 223, 129);
+  padding: 0 5px;
+  text-decoration: none;
+  border-right: 1px solid grey;
+}
+
+.footer a:link:last-child {
+  border: none;
 }
