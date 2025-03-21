@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="leftbox">
+          <div class="logo">
+            <img
+              src="Adobe Express - file.png"
+              alt="logo"
+              width="90px"
+              height="80px"
+            />
+          </div>
+          <div class="main-still">
+            <p>
+              A smart city is not just about technology; it's about people,
+              innovation, and sustainability working together for a better
+              tomorrow. 🌍🏙️
+            </p>
+          </div>
+        </div>
+
+        <div class="rightbox">
+          <div class="account">
+            <h2>Create Account</h2>
+
+            <form id="signup-form">
+              <input
+                class="user-name"
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                required
+              />
+              <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+
+              <div class="pass">
+                <input
+                  type="password"
+                  name="password"
+                  maxlength="16"
+                  placeholder="Password"
+                  id="password"
+                  required
+                />
+                <img
+                  src="eye-password-hide-svgrepo-com.svg"
+                  alt="Toggle Password"
+                  id="eyeIcon"
+                />
+              </div>
+
+              <button class="sign-button" type="submit">Sign Up</button>
+            </form>
+          </div>
+
+          <div class="other-sign">
+            <p>Or Sign Up With</p>
+          </div>
+          <div class="other">
+            <nav class="other-link">
+              <a href="#"><img src="icons8-instagram.svg" alt="Instagram" /></a>
+              <a href="#"><img src="icons8-linkedin.svg" alt="LinkedIn" /></a>
+              <a href="#"><img src="icons8-facebook.svg" alt="Facebook" /></a>
+              <a href="#"><img src="icons8-google.svg" alt="Google" /></a>
+              <a href="#"><img src="icons8-twitter.svg" alt="Twitter" /></a>
+            </nav>
+          </div>
+
+          <div class="sign-up">
+            <p>Already have an account? <a href="signIn.html">Sign In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

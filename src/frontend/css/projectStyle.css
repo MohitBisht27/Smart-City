@@ -1,0 +1,337 @@
+/* Reset default margins, paddings, and set box-sizing */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(-90deg, #1a1f4b, #3a2b7c, #6a5ab1);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-90deg, #1a1f4b, #3a2b7c, #6a5ab1);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.nav-bar a {
+  padding: 2px 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Banner Section */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.quote {
+  width: 80%;
+  color: #ff9c55;
+}
+
+.quote p {
+  font-size: 40px;
+  word-wrap: break-word;
+}
+
+/* Smart Nation Section */
+.smart-nation {
+  width: calc(100% - 40px); /* Prevents overflow */
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 10px #fffefc;
+}
+
+.sn-leftbox {
+  width: 60%;
+  height: 250px;
+  padding: 20px;
+}
+
+.sn-leftbox h2 {
+  margin-top: 40px;
+  color: #ff9c55;
+}
+
+.sn-leftbox p {
+  width: 90%;
+  color: white;
+}
+
+.sn-leftbox button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 175px;
+  height: 40px;
+  background-color: #ff9c55;
+  color: white;
+  cursor: pointer;
+}
+
+.sn-rightbox {
+  width: 40%;
+}
+
+.sn-rightbox video {
+  width: 100%;
+  height: 250px;
+}
+
+/* Faded Grid Section */
+.faded-grids {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(white-map-city-bogota-digital-260nw-1339788452.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Smart Initiatives */
+.smart-int {
+  padding: 40px;
+}
+
+.st-header {
+  color: #ff9c55;
+  font-size: 45px;
+}
+
+.smart-int p {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.smart-int ul {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.smart-int li {
+  padding: 2px 0px;
+  color: grey;
+}
+
+/* Parking Card */
+.parking {
+  margin-top: 20px;
+  padding: 40px;
+  background-color: white;
+  width: 350px;
+  height: 515px;
+}
+
+.parking img {
+  width: 300px;
+  height: 190px;
+  object-fit: cover;
+}
+
+.parking h4 {
+  color: rgb(88, 182, 229);
+  font-size: 20px;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.parking p {
+  font-size: 16px;
+  color: gray;
+}
+
+/* Grid Section */
+.grid-container {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+}
+
+.footer p {
+  color: white;
+  padding: 0 5px;
+  border-right: 1px solid grey;
+}
+
+.footer a:link {
+  color: rgb(151, 223, 129);
+  padding: 0 5px;
+  text-decoration: none;
+  border-right: 1px solid grey;
+}
+
+.footer a:link:last-child {
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote p {
+    font-size: 30px;
+  }
+
+  .sn-leftbox {
+    width: 100%;
+  }
+
+  .sn-leftbox p {
+    width: 90%;
+  }
+
+  .sn-rightbox {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pop {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.pop h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.pop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.pop-grid-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.parking {
+  margin: 0px 20px;
+}
+.sn-leftbox ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.sn-leftbox li {
+  color: #d1c5ff;
+  margin: 10px 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.sn-leftbox li::before {
+  content: "▷";
+  position: absolute;
+  left: 0;
+  color: #ff9c55;
+}
+
+.grid-item h4 {
+  color: #3a2b7c;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.grid-item p {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.pop-grid-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.pop-grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.pop-grid-item h4 {
+  color: #ff9c55;
+  margin: 10px 0;
+}
+
+.pop-grid-item p {
+  color: #d1c5ff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .sn-leftbox h2 {
+    font-size: 1.8rem;
+  }
+
+  .sn-leftbox p {
+    font-size: 1rem;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+}

@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  background: linear-gradient(-90deg, #1a1f4b, #3a2b7c, #6a5ab1);
+  background-repeat: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(2840.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Box */
+.leftbox {
+  width: 30%;
+  height: 472px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 0;
+  background-color: blueviolet;
+  background: none;
+}
+
+.main-still {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-still img {
+  width: 80%;
+}
+
+/* Right Box */
+.rightbox {
+  height: 472px;
+  border: 1px solid rgb(227, 224, 224);
+  background-color: transparent;
+  border-radius: 20px;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 40%;
+  margin-left: -20px;
+  z-index: 1;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+input {
+  background-color: transparent;
+  color: white; /* Added to make text visible on dark background */
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.account h2 {
+  color: #ff9c55;
+}
+
+.account input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.pass {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.pass input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent; /* Ensure transparent background */
+}
+
+.pass img {
+  width: 25px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Made placeholder slightly transparent */
+}
+
+.sign-button {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #d87a3c;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sign-button:hover {
+  background-color: #ff9c55;
+}
+
+.other-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.other-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.other-link img {
+  width: 30px;
+  margin: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.sign-up {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  color: #ccc;
+}
+
+.sign-up a {
+  color: #d87a3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-up p {
+  color: white;
+}
+
+.logo-svg {
+  width: 2rem;
+  height: 6rem;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.28rem;
+  font-weight: bold;
+  color: black;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.8rem;
+}
