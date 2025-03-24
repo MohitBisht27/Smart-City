@@ -12,6 +12,7 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Header animations */
 .header {
   display: flex;
   justify-content: space-between;
@@ -22,6 +23,18 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .logo {
@@ -32,6 +45,19 @@ body {
 .logo img {
   height: 40px;
   width: auto;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .nav {
@@ -81,7 +107,7 @@ body {
 }
 
 .signs img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(10deg);
 }
 
 button {
@@ -93,11 +119,22 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
 }
 
 button:hover {
   background-color: #0052cc;
   transform: translateY(-2px);
+  animation: none;
 }
 
 button a {
@@ -105,17 +142,44 @@ button a {
   text-decoration: none;
 }
 
+/* Hero section animations */
 .name {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 250px;
   background: linear-gradient(-90deg, #1a1f4b, #3a2b7c, #6a5ab1);
+  background-size: 200% 200%;
+  animation: gradientBG 5s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .name h1 {
   font-size: 42px;
   color: white;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .center {
@@ -127,6 +191,20 @@ button a {
   max-width: 1200px;
   gap: 40px;
   padding: 0 20px;
+  opacity: 0;
+  animation: slideInFromBottom 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero {
@@ -151,13 +229,31 @@ button a {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.video-in video:hover {
+  transform: scale(1.03);
 }
 
 .hero h2 {
   font-size: 40px;
   margin-bottom: 20px;
+  position: relative;
+  animation: typeWriter 2s steps(40) 1s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
 }
 
+@keyframes typeWriter {
+  to {
+    width: 100%;
+  }
+}
+
+/* Lists animation */
 .two-list {
   display: flex;
   justify-content: flex-start;
@@ -169,22 +265,50 @@ button a {
   margin: 0;
 }
 
-.list-one p {
-  padding: 10px 0px;
-}
-
-.list-one li {
-  list-style: none;
-}
-
+.list-one p,
 .list-two p {
   padding: 10px 0px;
+  position: relative;
+  opacity: 0;
+  animation: fadeInList 0.5s ease forwards;
 }
 
+.list-one p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.list-one p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.list-one p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.list-two p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.list-two p:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.list-two p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInList {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list-one li,
 .list-two li {
   list-style: none;
 }
 
+/* Mid section animation */
 .mid {
   display: flex;
   flex-direction: row;
@@ -194,6 +318,9 @@ button a {
   max-width: 1200px;
   gap: 60px;
   padding: 0 20px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 .img-in {
@@ -208,6 +335,26 @@ button a {
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.img-in img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .details {
@@ -223,8 +370,29 @@ button a {
 .details h2 {
   margin: 18px 0px;
   font-size: 22px;
+  position: relative;
+  overflow: hidden;
 }
 
+.details h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0066ff;
+  animation: lineGrow 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 50%;
+  }
+}
+
+/* Card animation */
 .card {
   border-radius: 5px;
   max-width: 400px;
@@ -232,6 +400,24 @@ button a {
   flex-direction: row;
   height: 125px;
   background-color: aqua;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInCard 0.6s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideInCard {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .leftbox {
@@ -241,18 +427,42 @@ button a {
   background-color: rgb(140, 236, 150);
   flex: 1;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.leftbox::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  from {
+    transform: rotate(30deg) translateX(-100%);
+  }
+  to {
+    transform: rotate(30deg) translateX(100%);
+  }
 }
 
 .leftbox h2 {
   font-size: 20px;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .rightbox {
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex: 1;
 }
 
@@ -260,6 +470,8 @@ button a {
   font-size: 18px;
   padding: 20px;
 }
+
+/* End section animation */
 .end {
   display: flex;
   flex-direction: column;
@@ -293,11 +505,48 @@ button a {
   padding: 20px;
   margin: 0 auto;
   border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  animation: fadeInGrid 0.8s ease forwards;
+}
+
+.detail-grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.detail-grid-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.detail-grid-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.detail-grid-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .detail-grid-item img {
   height: 80px;
   border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.detail-grid-item:hover img {
+  transform: rotate(360deg);
 }
 
 .detail-grid-item h2 {
@@ -308,11 +557,41 @@ button a {
   width: 200px;
   padding: 10px 0px;
 }
+
+/* Showcase animations */
 .showcase-container {
   background-color: #0fd880;
   padding: 50px 20px;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shimmerEffect 3s infinite;
+}
+
+@keyframes shimmerEffect {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
 }
 
 .showcase-title {
@@ -320,6 +599,18 @@ button a {
   font-weight: 500;
   max-width: 600px;
   margin: 0 auto 10px;
+  animation: expandText 1s ease-out;
+}
+
+@keyframes expandText {
+  from {
+    letter-spacing: -5px;
+    opacity: 0;
+  }
+  to {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 
 .divider {
@@ -328,6 +619,16 @@ button a {
   background-color: white;
   margin: 20px auto;
   border-radius: 3px;
+  animation: expandWidth 1.5s ease-out;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
 }
 
 .brand-logos {
@@ -341,6 +642,24 @@ button a {
 
 .brand-logo {
   height: 40px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.brand-logo:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.brand-logo:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.brand-logo:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.brand-logo:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.brand-logo:nth-child(5) {
+  animation-delay: 1s;
 }
 
 .stats-container {
@@ -359,6 +678,38 @@ button a {
   width: 180px;
   color: #333;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+}
+
+.stat-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.stat-box:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stat-box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.stat-box:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stat-box:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-number {
@@ -366,6 +717,17 @@ button a {
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
+  animation: countUp 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .stat-number.colored {
@@ -385,8 +747,26 @@ button a {
   font-size: 16px;
   margin-top: 30px;
   color: white;
+  position: relative;
 }
 
+.website-url::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.website-url:hover::after {
+  width: 100px;
+}
+
+/* Footer animation */
 .footer {
   display: flex;
   margin-top: 40px;
@@ -394,6 +774,18 @@ button a {
   align-items: center;
   background-color: black;
   height: 80px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .footer p {
@@ -407,6 +799,13 @@ button a {
   padding: 0 5px;
   text-decoration: none;
   border-right: 1px solid grey;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer a:link:hover {
+  color: rgb(220, 255, 210);
+  transform: scale(1.1);
 }
 
 .footer a:link:last-child {
