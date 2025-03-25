@@ -111,7 +111,7 @@ header {
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
-  background-image: url(white-map-city-bogota-digital-260nw-1339788452.jpg);
+  background-image: url("../image/white-map-city-bogota-digital-260nw-1339788452.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
