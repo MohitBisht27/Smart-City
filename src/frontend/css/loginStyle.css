@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,203 +10,85 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
-  background: linear-gradient(-90deg, #1a1f4b, #3a2b7c, #6a5ab1);
-  background-repeat: 0;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../image/2840.jpg");
+  background-image: url("../image/pexels-apasaric-2341830.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
 }
 
-.content {
-  width: 70%;
+.box {
+  width: 400px;
+  height: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* Left Box */
-.leftbox {
-  width: 30%;
-  height: 472px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-right: 0;
-  background-color: blueviolet;
-  background: none;
 }
 
-.main-still {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.box h2 {
+  color: white;
+  margin: 30px 0px;
+  text-align: center;
 }
 
-.main-still img {
-  width: 80%;
-}
-
-/* Right Box */
-.rightbox {
-  height: 472px;
-  border: 1px solid rgb(227, 224, 224);
-  background-color: transparent;
-  border-radius: 20px;
-  border-left: none;
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  width: 40%;
-  margin-left: -20px;
-  z-index: 1;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-input {
-  background-color: transparent;
-  color: white; /* Added to make text visible on dark background */
-}
-
-.account {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-}
-
-.account h2 {
-  color: #ff9c55;
-}
-
-.account input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
+.box input {
+  width: 300px;
+  height: 40px;
+  background: transparent;
   border: none;
+  border-bottom: 2px solid white;
   outline: none;
-  border-bottom: 1px solid #ccc;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .pass {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  position: relative;
+  width: 300px;
 }
 
 .pass input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background-color: transparent; /* Ensure transparent background */
+  width: 100%;
 }
 
-.pass img {
-  width: 25px;
+.pass #eyeIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Made placeholder slightly transparent */
+  width: 20px;
+  height: 20px;
 }
 
 .sign-button {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 300px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
   border: none;
-  background-color: #d87a3c;
   color: white;
-  width: 100%;
-  border-radius: 20px;
-  padding: 10px 0;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .sign-button:hover {
-  background-color: #ff9c55;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.other-sign {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+p {
   color: white;
+  margin-top: 20px;
 }
 
-.other-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.other-link img {
-  width: 30px;
-  margin: 0 15px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-}
-
-.sign-up {
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2px;
-  color: #ccc;
-}
-
-.sign-up a {
-  color: #d87a3c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.sign-up p {
+p a {
   color: white;
-}
-
-.logo-svg {
-  width: 2rem;
-  height: 6rem;
-}
-
-.logo-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1.28rem;
-  font-weight: bold;
-  color: black;
-}
-
-.social-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.social {
-  display: flex;
-  gap: 0.8rem;
+  text-decoration: underline;
 }
