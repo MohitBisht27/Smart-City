@@ -205,6 +205,7 @@ button a {
   padding: 10px;
   font-size: 16px;
   background-color: aquamarine;
+  background-color: #6a5ab1;
   border: none;
   border-radius: 20px;
   outline: none;
@@ -243,7 +244,12 @@ button a {
   border-radius: 20px;
   outline: none;
 }
-
+.leftbox input::placeholder {
+  color: white;
+}
+.leftbox .message::placeholder {
+  color: white;
+}
 .leftbox button {
   margin: 5px 0px;
 }
