@@ -12,7 +12,7 @@
         <img src="" alt="logo" />
       </div>
       <div class="nav">
-        <a href="../html/index.html" >Home</a>
+        <a href="../html/index.html">Home</a>
         <a href="../html/project.html">Solutions</a>
         <a href="../html/service.html">Service</a>
         <a href="../html/aboutUs.html">About</a>
@@ -82,10 +82,17 @@
         </div>
       </div>
       <div class="map-img">
-        <div
-          id="googleMap"
-          style="width: 100%; height: 150px border-radius 10px"
-        ></div>
+        <!-- Embedding a map using iframe as an alternative approach -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.0833238986426!2d75.6990144!3d31.2459927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1712755292873!5m2!1sen!2sin"
+          width="100%"
+          height="150"
+          style="border: 0; border-radius: 10px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
       </div>
     </div>
     <div class="end">
@@ -98,18 +105,4 @@
       </div>
     </div>
   </body>
-  <script>
-    function myMap() {
-      var mapProp = {
-        center: new google.maps.LatLng(51.508742, -0.12085),
-        zoom: 5,
-      };
-      var map = new google.maps.Map(
-        document.getElementById("googleMap"),
-        mapProp
-      );
-    }
-  </script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 </html>
