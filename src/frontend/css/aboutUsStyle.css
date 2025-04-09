@@ -336,24 +336,11 @@ button a {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  transition: transform 0.5s ease-in, box-shadow 0.5s ease;
 }
 
 .img-in img:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -547,7 +534,7 @@ button a {
 }
 
 .detail-grid-item:hover img {
-  transform: rotate(360deg);
+  transform: scale(1.2);
 }
 
 .detail-grid-item h2 {
