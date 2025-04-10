@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/loginStyle.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <input
+          class="user-name"
+          type="text"
+          name="fullName"
+          placeholder="Full Name"
+          required
+        />
+        <br />
+        <input
+          class="email"
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        />
+        <br />
+        <div class="pass">
+          <input
+            type="password"
+            name="password"
+            maxlength="16"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <img
+            src="../image/eye-close.svg"
+            alt="Toggle Password"
+            id="eyeIcon"
+          />
+        </div>
+        <button class="sign-button" type="submit" value="submit">
+          Sign Up
+        </button>
+      </form>
+      <p>If you have an account! <a href="login.html">Sign In</a></p>
+    </div>
+
+    <script src="../javascript/login.js"></script>
+  </body>
+</html>

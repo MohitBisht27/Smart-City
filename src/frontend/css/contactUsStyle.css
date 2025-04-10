@@ -297,11 +297,13 @@ button a {
   gap: 2rem;
 }
 .detail-items {
-  width: 250px;
-  height: 150px;
+  width: 300px;
+  height: 200px;
   background-color: #6a5ab1;
   border-radius: 10px;
   color: white;
+  text-align: center;
+  padding:22px;
 }
 .detail-items h3 {
   padding: 10px;
