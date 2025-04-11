@@ -100,6 +100,20 @@ a:nth-child(3) {
   line-height: 30px;
   padding: 20px 0;
 }
+.nav a:hover,
+.nav a.active {
+  color: var(--accent-orange);
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-orange);
+}
 
 .get {
   width: 200px;
