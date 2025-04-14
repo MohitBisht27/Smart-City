@@ -1,0 +1,230 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0033 0%, #3a0082 100%);
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  background: rgba(30, 6, 68, 0.85);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 30px rgba(78, 233, 255, 0.2);
+  border: 1px solid rgba(78, 233, 255, 0.1);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Form Title */
+.form-title {
+  color: #4ee9ff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(78, 233, 255, 0.3);
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid rgba(78, 233, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(25, 5, 58, 0.6);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4ee9ff;
+  box-shadow: 0 0 10px rgba(78, 233, 255, 0.5);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group label {
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 15px;
+  font-size: 12px;
+  opacity: 1;
+  color: #4ee9ff;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4ee9ff;
+  font-size: 18px;
+}
+
+/* Password Field */
+.pass {
+  position: relative;
+  width: 100%;
+}
+
+.pass img {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: brightness(0) invert(1) sepia(100%) saturate(8000%) hue-rotate(155deg);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #0062ff 0%, #4ee9ff 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(78, 233, 255, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(78, 233, 255, 0.6);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Links Section */
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+}
+
+.links p {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.links button {
+  background: none;
+  border: none;
+  color: #4ee9ff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.links button:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(78, 233, 255, 0.8);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  accent-color: #4ee9ff;
+}
+
+/* Remember me section */
+.remember-section {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.forgot-password {
+  color: #4ee9ff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(78, 233, 255, 0.8);
+}
+
+/* City Background */
+.city-background {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+
+  .city-background {
+    opacity: 0.3;
+    right: 0;
+    width: 100%;
+    background-position: center;
+  }
+}

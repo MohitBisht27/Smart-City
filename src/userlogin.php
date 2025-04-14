@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="../test/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <style>
       .pass {
         position: relative;
@@ -103,39 +103,6 @@
         <button id="signUpButton">Sign Up</button>
       </div>
     </div>
-
-    <!-- JS inline for testing -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const signUpButton = document.getElementById("signUpButton");
-        const signInButton = document.getElementById("signInButton");
-        const signInForm = document.getElementById("signIn");
-        const signUpForm = document.getElementById("signup");
-
-        signUpButton.addEventListener("click", () => {
-          signInForm.style.display = "none";
-          signUpForm.style.display = "block";
-        });
-
-        signInButton.addEventListener("click", () => {
-          signUpForm.style.display = "none";
-          signInForm.style.display = "block";
-        });
-
-        function setupEyeToggle(passwordId, eyeIconId) {
-          const passwordInput = document.getElementById(passwordId);
-          const eyeIcon = document.getElementById(eyeIconId);
-
-          eyeIcon.addEventListener("click", () => {
-            const isPassword = passwordInput.type === "password";
-            passwordInput.type = isPassword ? "text" : "password";
-            eyeIcon.src = `../test/eye-${isPassword ? "open" : "close"}.svg`;
-          });
-        }
-
-        setupEyeToggle("signInPassword", "signInEyeIcon");
-        setupEyeToggle("signUpPassword", "signUpEyeIcon");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -2,7 +2,8 @@
 
 // Get the map container element
 const mapImg = document.querySelector(".map-img");
-
+const btnE = document.querySelector(".btn-e");
+const mailC = document.querySelector(".mail");
 // Create a div element to hold the map
 const mapContainer = document.createElement("div");
 mapContainer.id = "map";
@@ -50,3 +51,12 @@ if (navigator.geolocation) {
   mapContainer.innerHTML =
     '<p style="padding: 20px; text-align: center;">Geolocation is not supported by your browser.</p>';
 }
+
+btnE.addEventListener("click", function () {
+  if (mailC.value === "") {
+    alert("Enter your mail");
+  } else {
+    alert("Our team will contact you");
+  }
+  mailC.value = "";
+});

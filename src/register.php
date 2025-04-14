@@ -39,7 +39,7 @@ if(isset($_POST['signIn'])){
     session_start();
     $row=$result->fetch_assoc();
     $_SESSION['email']=$row['email'];
-    header("Location: /Smart-City/src/frontend/html/index.html");
+    header("Location: /test/frontend/html/index.html");
     exit();
    }
    else{
